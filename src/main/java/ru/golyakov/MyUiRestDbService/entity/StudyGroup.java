@@ -1,0 +1,28 @@
+package ru.golyakov.MyUiRestDbService.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "STUDY_GROUPS")
+public class StudyGroup {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "faculty")
+    private String faculty;
+
+    @Column(name = "course")
+    private Integer course;
+}
